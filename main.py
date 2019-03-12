@@ -1,3 +1,4 @@
+import datetime
 import os
 import requests
 import time
@@ -10,7 +11,7 @@ from pprint import pprint
 
 opts = Options()
 opts.headless = True
-print("Starte FireFox")
+print(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S") + " - Starte FireFox")
 browser = Firefox(options=opts)
 
 #Setzen der Variablen
@@ -21,7 +22,7 @@ password = os.environ.get('PASSWORD')
 telegrambotkey = os.environ.get('TELEGRAMBOTKEY')
 chatid = os.environ.get('CHATID')
 
-print("Oeffne Startseite")
+print(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S") + " - Oeffne Startseite")
 
 # Startseite
 browser.get(postbankurl)
